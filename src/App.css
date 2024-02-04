@@ -1,0 +1,309 @@
+/* Improved Design with Bold and Bright Colors CSS */
+body {
+  background-color: rgb(255, 255, 255);
+  height: fit-content;
+}
+
+.main {
+  flex: auto;
+}
+.section1-container {
+  top: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 20vh;
+  background-color: #ffffff; /* Bright red background */
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section2-container {
+  top: -200px;
+  position: absolute;
+  left: 18%;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 2rem;
+  justify-items: center;
+  align-items: center;
+  background-color: #f6c310; /* Bright yellow background */
+  position: relative;
+  z-index: 1;
+}
+
+.clothcontainer {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #f69d0e; /* Bright orange border */
+  background-color: #fff;
+  text-align: center;
+  width: 350px;
+  height: 550px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.clothcontainer:hover {
+  transform: scale(1.05);
+}
+
+.underline {
+  margin-top: 0px;
+  background-color: #f6c310; /* Match section2 background color */
+  width: 90px;
+  height: 5px;
+  position: relative;
+  left: 35%;
+}
+
+.img-container {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.info-container {
+  flex: 1;
+  padding: 1rem;
+}
+
+.name {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: #f69d0e; /* Bright orange text color */
+  display: flex;
+  align-items: baseline;
+  text-align: center;
+}
+
+.price .dollar {
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+.price .number {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.price .decimal {
+  font-size: 1.2rem;
+}
+
+.size {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Add hover effect to underline */
+.underline:hover {
+  background-color: #ff6b6b; /* Bright red on hover */
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.btn {
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin: 5px;
+  border: transparent;
+}
+
+.btn:hover {
+  background-color: #f69d0e; /* Bright orange on hover */
+  cursor: pointer;
+}
+
+.cart-btn {
+  background-color: #f69d0e;
+  border: transparent;
+  width: 100px;
+  height: 30px;
+  border-radius: 1%;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.cart-btn:hover {
+  background-color: #ffd900; /* Bright red on hover */
+  transform: scale(1.05);
+}
+
+.cart-icon {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  font-size: 50px;
+  color: #333;
+}
+
+.cart-icon:hover {
+  color: #f69d0e; /* Bright orange on hover */
+  cursor: pointer;
+  transform: scale(1.25);
+  transition: transform 0.3s;
+}
+
+/* cart.css (or your preferred CSS file name) */
+/* Style the cart overlay */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure it's above other content */
+}
+
+.cart-all {
+  max-height: 600px; /* Set a maximum height for the cart */
+  overflow-y: auto; /* Add a vertical scrollbar when content overflows */
+}
+
+/* Style the cart container */
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it's above the overlay */
+}
+
+/* Style each cart item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px; /* Adjust as needed */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-imgContainer {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+/* Style the cart item image */
+.cart-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 5px;
+}
+
+/* Style the cart item information */
+.cart-info {
+  flex-grow: 1; /* Take remaining space */
+  position: relative;
+}
+
+/* Style the item name */
+.cart-info h4:first-child {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* Style the item price */
+.cart-info h4:last-child {
+  font-size: 1.1rem;
+  color: #ff5722; /* Adjust the color as needed */
+}
+
+.cart-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f8f8; /* Adjust the background color as needed */
+  border-top: 1px solid #ddd; /* Add a separator line */
+}
+
+/* Style the total amount */
+.cart-footer h3 {
+  font-size: 1.4rem;
+  margin: 1px;
+}
+
+/* Style the "Clear Cart" button */
+.clear-cart {
+  background-color: #ff5722; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Add a smooth hover effect */
+  margin: 3px;
+}
+
+.clear-cart:hover {
+  background-color: #e84100; /* Adjust hover background color */
+}
+
+/* Style the "Close Cart" button */
+.close-button {
+  background-color: #555; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Add a smooth hover effect */
+  margin: 3px;
+}
+
+.close-button:hover {
+  background-color: #333; /* Adjust hover background color */
+}
